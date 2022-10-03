@@ -1,0 +1,96 @@
+slave dash board in linux terminal------------->
+
+login as: slave
+Server refused our key
+slave@43.205.217.217's password:
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[slave@ip-172-31-38-177 ~]$ top
+top - 15:06:50 up 20 min,  2 users,  load average: 1.01, 0.47, 0.18
+Tasks: 107 total,   3 running,  59 sleeping,   1 stopped,   0 zombie
+%Cpu(s): 85.7 us,  8.6 sy,  0.0 ni,  2.3 id,  2.3 wa,  0.0 hi,  0.3 si,  0.7 st
+KiB Mem :   988932 total,    76680 free,   200056 used,   712196 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   628612 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+ 3493 root      20   0  524628  99620  20672 R 91.4 10.1   1:58.54 yum
+    7 root      20   0       0      0      0 I  0.7  0.0   0:00.58 kworker/u30+
+  847 root      20   0       0      0      0 S  0.7  0.0   0:00.58 kswapd0
+ 3484 slave     20   0  168836   4280   3768 R  0.7  0.4   0:00.16 top
+    8 root       0 -20       0      0      0 I  0.3  0.0   0:00.42 kworker/0:1+
+ 4302 root      20   0       0      0      0 I  0.3  0.0   0:00.06 kworker/0:3+
+    1 root      20   0  123696   5508   3824 S  0.0  0.6   0:01.94 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_par_gp
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0+
+    9 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_tasks_r+
+   11 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_tasks_t+
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.13 ksoftirqd/0
+   13 root      20   0       0      0      0 R  0.0  0.0   0:00.12 rcu_sched
+   14 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+[1]+  Stopped                 top
+[slave@ip-172-31-38-177 ~]$ curl ifconfig.co
+43.205.217.217
+[slave@ip-172-31-38-177 ~]$ top
+top - 15:08:34 up 22 min,  2 users,  load average: 0.26, 0.38, 0.18
+Tasks: 108 total,   1 running,  60 sleeping,   2 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.0 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :   988932 total,   262812 free,   124536 used,   601584 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   705304 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0  123696   5516   3824 S  0.0  0.6   0:01.95 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_par_gp
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0+
+    7 root      20   0       0      0      0 I  0.0  0.0   0:00.74 kworker/u30+
+    8 root       0 -20       0      0      0 I  0.0  0.0   0:00.53 kworker/0:1+
+    9 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_tasks_r+
+   11 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_tasks_t+
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.16 ksoftirqd/0
+   13 root      20   0       0      0      0 I  0.0  0.0   0:00.14 rcu_sched
+   14 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   16 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   18 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   19 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   20 root      20   0       0      0      0 I  0.0  0.0   0:00.01 kworker/u30+
+[2]+  Stopped                 top
+[slave@ip-172-31-38-177 ~]$ which java
+/usr/bin/java
+[slave@ip-172-31-38-177 ~]$ ^C
+[slave@ip-172-31-38-177 ~]$ ll
+total 0
+[slave@ip-172-31-38-177 ~]$ ll /usr/bin/java
+lrwxrwxrwx 1 root root 22 Oct  3 15:05 /usr/bin/java -> /etc/alternatives/java
+[slave@ip-172-31-38-177 ~]$ ll /etc/alternatives/java
+lrwxrwxrwx 1 root root 52 Oct  3 15:05 /etc/alternatives/java -> /usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java
+[slave@ip-172-31-38-177 ~]$ pwd
+/home/slave
+[slave@ip-172-31-38-177 ~]$ ls -lrt
+total 1312
+-rw-rw-r-- 1 slave slave 1339992 Oct  3 15:09 remoting.jar
+drwxrwxr-x 4 slave slave      34 Oct  3 15:09 remoting
+[slave@ip-172-31-38-177 ~]$ pwd
+/home/slave
+[slave@ip-172-31-38-177 ~]$ ls -lrt
+total 1312
+-rw-rw-r-- 1 slave slave 1339992 Oct  3 15:09 remoting.jar
+drwxrwxr-x 4 slave slave      34 Oct  3 15:09 remoting
+drwxrwxr-x 3 slave slave      19 Oct  3 15:14 workspace
+[slave@ip-172-31-38-177 ~]$ cd workspace/
+[slave@ip-172-31-38-177 workspace]$ ls -lrt
+total 0
+drwxrwxr-x 2 slave slave 6 Oct  3 15:14 pro-1
+[slave@ip-172-31-38-177 workspace]$ cd pro-1/
+[slave@ip-172-31-38-177 pro-1]$ ls -lrt
+total 0
+[slave@ip-172-31-38-177 pro-1]$ cd ..
+[slave@ip-172-31-38-177 workspace]$
